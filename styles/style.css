@@ -1,0 +1,60 @@
+/* 
+TO DOs:
+- the whole body is a little tilted to left, fix it, see it in devtool
+*/
+
+@import "normalize.css";
+
+@font-face {
+  font-family: "redhat";
+  src: url("../fonts/RedHatDisplay-Regular.ttf");
+}
+
+:root {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: 
+  "logo logo"
+  "image-hero-left image-hero-right"
+  "text-overview text-overview";
+  margin-top: 6.87rem;
+  row-gap: 6.87rem;
+  font-family: redhat;
+}
+
+body .logo {
+  grid-area: logo;
+  justify-self: center;
+  transform: scale(2);
+}
+
+body .image-hero-left {
+  grid-area: image-hero-left;
+  transform:translateX(-1rem);
+}
+
+body .image-hero-right {
+  grid-area: image-hero-right;
+  transform:translateX(1rem);
+}
+
+body .text-overview {
+  font-family: redhat;
+  grid-area: text-overview;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* @media only screen and (max-width: 376px) {
+  body {
+    background-color: black;
+  }
+} */
