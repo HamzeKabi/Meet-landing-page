@@ -11,6 +11,7 @@
   --olive: rgb(140, 140, 150);
   --hippie-blue: rgb(80, 150, 170);
   --lilac-bush: rgb(133, 95, 178);
+  --asagi-blue: rgb(70, 144, 160);
 }
 
 *, *::before, *::after {
@@ -28,10 +29,11 @@ body {
   grid-template-areas: 
   "logo logo"
   "image-hero-left image-hero-right"
-  "text-overview text-overview"
+  "text-section-overview text-section-overview"
   "line-circle line-circle"
   "img1 img2"
-  "img3 img4";
+  "img3 img4"
+  "text-section-features text-section-features";
   justify-content: center;
   padding: 0.4rem;
   row-gap: 3rem;
@@ -60,18 +62,21 @@ body {
   transform:translateX(0.8rem);
 }
 
-.text-overview {
-  grid-area: text-overview;
+.text-section {
   text-align: center;
 }
 
-.text-overview h1 {
+.text-section#overview {
+  grid-area: text-section-overview;
+}
+
+.text-section h1 {
   font-size: 2rem;
   margin: 0 2rem;
   color: var(--woodrush);
 }
 
-.text-overview p {
+.text-section p {
   color: var(olive);
   margin: 1.5rem 1rem;
 }
@@ -155,6 +160,15 @@ button {
 
 .people-connecting#img4 {
   grid-area: img4;
+}
+
+.text-section#features {
+  grid-area: text-section-features;
+}
+
+.text-section#features h4 {
+  letter-spacing: 0.2rem;
+  color: var(--asagi-blue);
 }
 /* 
 @media only screen and (max-width: 376px) {
