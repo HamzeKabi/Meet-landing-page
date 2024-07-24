@@ -30,10 +30,12 @@ body {
   "logo logo"
   "image-hero-left image-hero-right"
   "text-section-overview text-section-overview"
-  "line-circle line-circle"
+  "line-circle1 line-circle1"
   "img1 img2"
   "img3 img4"
-  "text-section-features text-section-features";
+  "text-section-features text-section-features"
+  "line-circle2 line-circle2"
+  "image-footer-desktop image-footer-desktop";
   justify-content: center;
   padding: 0.4rem;
   row-gap: 3rem;
@@ -112,7 +114,6 @@ button {
 }
 
 .line-circle {
-  grid-area: line-circle;
   justify-self: center;
   color: var(--olive);
   font-weight: 900;
@@ -136,6 +137,10 @@ button {
 
 .circle pre {
   margin-left: 0.85rem;
+}
+
+.no1 {
+  grid-area: line-circle1;
 }
 
 .people-connecting {
@@ -170,6 +175,35 @@ button {
   letter-spacing: 0.2rem;
   color: var(--asagi-blue);
 }
+
+.no2 {
+  grid-area: line-circle2;
+  margin-top: -1rem;
+  z-index: 1;
+}
+
+.no2 .circle {
+  background-color: white;
+}
+
+.image-footer-desktop {
+  grid-area: image-footer-desktop;
+  width: 100%;
+  height: auto;
+  margin-top: -4.4rem;
+}
+
+/* use the following code to color the image 
+        .image-container {
+            width: 300px;
+            height: 300px;
+            background-color: blue; /* Blue background */
+            background-image: url('your-image-url.jpg'); /* Your image URL */
+            background-size: cover; /* Ensures the image covers the container */
+            background-blend-mode: multiply; /* Blends the image with the background color */
+        }
+        */
+
 /* 
 @media only screen and (max-width: 376px) {
   body {
