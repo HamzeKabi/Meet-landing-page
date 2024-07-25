@@ -20,9 +20,12 @@
 
 /* all the contents are fit inside a grid. mobile version is consisted of 2 cols and several rows */
 
+html {
+  margin: -8px;
+}
+
 body {
   width: 100%;
-  height: 100vh;
 }
 
 .container {
