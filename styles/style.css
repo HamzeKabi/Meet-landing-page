@@ -20,6 +20,11 @@
 
 /* all the contents are fit inside a grid. mobile version is consisted of 2 cols and several rows */
 
+body {
+  width: 100%;
+  height: 100vh;
+}
+
 .container {
   width: 100%;
   display: grid;
@@ -47,16 +52,16 @@
 
 .image-hero-container {
   grid-area: image-hero-container;
-  /* width: 100%;
-  height: 120%; */
-  /* height: 100%; */
+  width: 100%;
+  height: 120%;
   overflow: hidden;
 }
 
 .image-hero {
   width: 100%;
   height: auto;
-  /* scale: 1; */
+  scale: 1.07;
+  translate: 0 1rem;
   /* grid-area: image-hero; */
   /* display: block; */
   /* margin: 0 auto; */
