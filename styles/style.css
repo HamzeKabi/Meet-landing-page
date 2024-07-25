@@ -18,6 +18,9 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: auto;
+}
 /* all the contents are fit inside a grid. mobile version is consisted of 2 cols and several rows */
 
 .container {
@@ -34,7 +37,7 @@
   "line-circle2 line-circle2"
   "footer footer";
   justify-content: center;
-  padding: 0.4rem;
+  padding-top: 3rem;
   row-gap: 3rem;
   font-family: redhat;
   /* margin-left: 2vw; */
@@ -94,11 +97,6 @@
   color: var(olive);
   margin: 1.5rem 1rem;
 }
-
-/* button {
-  height: 4rem;
-  color: white;
-} */
 
 .buttons {
   display: flex;
@@ -164,6 +162,7 @@ button {
 .people-connecting#img1 {
   grid-area: img1;
   justify-self: end;
+  /* padding-left: rem; */
 }
 
 .people-connecting#img2 {
