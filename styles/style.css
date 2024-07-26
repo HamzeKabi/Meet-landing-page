@@ -162,7 +162,6 @@ button {
 .people-connecting#img1 {
   grid-area: img1;
   justify-self: end;
-  /* padding-left: rem; */
 }
 
 .people-connecting#img2 {
@@ -199,32 +198,45 @@ button {
 
 .footer {
   grid-area: footer;
-  width: 100%;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
   margin-top: -4.4rem;
   background-color: var(--asagi-blue);
+  height: 60vh;
 }
+
 .image-footer-desktop {
   width: 100%;
   height: auto;
   opacity: 0.2;
-  position: relative;
 }
 
 .text-section#footer {
   position: absolute;
-  translate: 0 -120%;
   color: white;
+  margin-top: 4rem;
 }
 
 .text-section#footer button {
   background-color: var(--lilac-bush);
-  width: 10rem;
+  padding: 0 1.2rem;
 }
 
 .text-section#footer span {
   color: rgb(216, 183, 254);
 }
+
+/* .text-section#footer gets out of .footer when the screen height gets smaller than 376px(tested on iphone SE),
+that's why when the .footer height converts from 60vh to 100vh when the screen heigh drops below 376px.
+it comes in handy when view by some smaller smartphones when their orientation is in landscape */
+@media only screen and (height < 376px) {
+  .footer {
+    height: 100vh;
+  }  
+}
+
 /* @media only screen and (max-width: 376px) {
   body {
     background-color: black;
