@@ -1,4 +1,7 @@
-/* @import "normalize.css"; */
+
+/* RWD starts width mobile screen sizes */
+
+@import "normalize.css";
 
 @font-face {
   font-family: "redhat";
@@ -40,7 +43,6 @@ body {
   padding-top: 3rem;
   row-gap: 3rem;
   font-family: redhat;
-  /* margin-left: 2vw; */
 }
 
 .logo {
@@ -60,21 +62,7 @@ body {
   height: auto;
   scale: 1.07;
   translate: 0 1rem;
-  /* grid-area: image-hero; */
-  /* display: block; */
-  /* margin: 0 auto; */
-  /* clip-path: inset(0 3%); */
 }
-
-/* .left {
-  grid-area: image-hero-left;
-  transform:translateX(-0.8rem);
-}
-
-.right {
-  grid-area: image-hero-right;
-  transform:translateX(0.8rem);
-} */
 
 .text-section {
   text-align: center;
@@ -116,11 +104,13 @@ button {
 .download#no1 {
   background-color: var(--hippie-blue);
   margin: auto 5rem;
+  max-width: 13.5rem;
 }
 
 .whatisit {
   background-color: var(--lilac-bush);
   margin: auto 6.5rem;
+  max-width: 10rem;
 }
 
 .line-circle {
@@ -235,6 +225,32 @@ it comes in handy when view by some smaller smartphones when their orientation i
   .footer {
     height: 100vh;
   }  
+}
+
+/* talets responsiveness */
+@media only screen and (767px < width < 1279px) {
+  .container {
+    grid-template-areas: 
+    "logo logo logo logo"
+    "image-hero-container image-hero-container image-hero-container image-hero-container"
+    "text-section-overview text-section-overview text-section-overview text-section-overview"
+    "line-circle1 line-circle1 line-circle1 line-circle1"
+    "img1 img2 img3 img4"
+    "text-section-features text-section-features text-section-features text-section-features"
+    "line-circle2 line-circle2 line-circle2 line-circle2"
+    "footer footer footer footer";
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .download#no1 , .whatisit {
+    margin: auto 0;
+    padding: 0 2rem;
+  }
 }
 
 /* @media only screen and (max-width: 376px) {
