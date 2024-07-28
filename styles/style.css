@@ -1,5 +1,5 @@
 
-/* RWD starts width mobile screen sizes */
+/* RWD starts with mobile screen sizes */
 
 @import "normalize.css";
 
@@ -25,7 +25,7 @@ body {
   margin: auto;
 }
 
-/* all the contents are fit inside a grid. mobile version is consisted of 2 cols and several rows */
+/* all the contents are fit inside a grid with several rows. mobile version is consisted of 2 cols, tablet and desktop version are consisted of 4 cols*/
 .container {
   width: 100%;
   display: grid;
@@ -59,10 +59,12 @@ body {
   translate: 0 1rem;
 }
 
+/* gets displayed on desktop screen sizes */
 .image-hero-left {
   display: none;
 }
 
+/* gets displayed on desktop screen sizes */
 .image-hero-right {
   display: none;
 }
@@ -89,6 +91,7 @@ body {
   margin: 1.5rem 1rem;
 }
 
+/* on tablet and desktop versions flex-direction converts to row */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -119,6 +122,8 @@ button {
   max-width: 12rem;
 }
 
+
+/* both line and circle are borders with given shapes */
 .line-circle {
   justify-self: center;
   color: var(--olive);
@@ -127,7 +132,6 @@ button {
 
 .line {
   border-right: 1px solid var(--olive);
-  /* border: 5px solid black; */
   height: 8rem;
   margin-right: 50%;
 }
@@ -141,6 +145,7 @@ button {
   margin-right: 50%;
 }
 
+/* could not center the text inside the circle, that's why I used <pre> and a left margin */
 .circle pre {
   margin-left: 0.85rem;
 }
@@ -185,13 +190,17 @@ button {
 .no2 {
   grid-area: line-circle2;
   margin-top: -1rem;
-  z-index: 1;
+  z-index: 1; /* in order to put it on the image below it*/
 }
 
 .no2 .circle {
   background-color: white;
 }
 
+/* used the following properties to make the image inside the .footer to not get squeezed or stretched and it's parts out of .footer
+not to cause anything 
+on .footer  overflow: hidden;  on .image-footer   width: 100%;   and   height: auto;
+  To give the color --asagi-blue to the .image-footer, I used  background-color: var(--asagi-blue); on .footer and  opacity: 0.2; on .image-footer*/
 .footer {
   grid-area: footer;
   display: flex;
@@ -200,7 +209,6 @@ button {
   overflow: hidden;
   margin-top: -4.4rem;
   background-color: var(--asagi-blue);
-  height: 60vh;
 }
 
 .image-footer {
@@ -209,10 +217,12 @@ button {
   opacity: 0.2;
 }
 
+/* gets displayed on tablet version */
 .image-footer#tablet {
   display: none;
 }
 
+/* gets displayed on desktop version */
 .image-footer#desktop {
   display: none;
 }
@@ -293,13 +303,13 @@ it comes in handy when view by some smaller smartphones when their orientation i
     display: none;
   }
   .image-hero-left {
-    display:grid;
+    display:block;
     grid-area: image-hero-left;
     justify-self: end;
   }
   
   .image-hero-right {
-    display:grid;
+    display:block;
     grid-area: image-hero-right;
     justify-self: start;
   }
@@ -333,11 +343,4 @@ it comes in handy when view by some smaller smartphones when their orientation i
   .image-footer#desktop {
     display: block;
   }
-
 }
-
-/* @media only screen and (max-width: 376px) {
-  body {
-    background-color: black;
-  }
-} */
