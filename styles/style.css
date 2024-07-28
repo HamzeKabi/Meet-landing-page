@@ -87,7 +87,7 @@ body {
 }
 
 .text-section p {
-  color: white;
+  color: var(--olive);
   margin: 1.5rem 1rem;
 }
 
@@ -231,6 +231,10 @@ on .footer  overflow: hidden;  on .image-footer   width: 100%;   and   height: a
   position: absolute;
   color: white;
   margin-top: 4rem;
+}
+
+.text-section#footer p {
+  color: white;
 }
 
 .text-section#footer button {
